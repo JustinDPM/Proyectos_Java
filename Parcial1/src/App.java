@@ -1,6 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
+import Models.IllegalTriangleException;
 import Models.Triangle;
 
 import java.util.Scanner;
@@ -14,7 +15,7 @@ public class App {
         String color;
         boolean filled;
         int band;
-
+    try {
         for (int i = 0; i < 3; i++){
             int contador = i + 1;
             System.out.println("Ingrese el lado " + contador + ": ");
@@ -39,5 +40,11 @@ public class App {
         System.out.println("Area: " + t1.getArea());
         System.out.println("Perimeter: " + t1.getPerimeter());
         System.out.println(t1.toString());
+    } catch (IllegalTriangleException e){
+        System.out.println(e.getMessage());
+    } catch (Exception e){
+        System.out.println("Error");
+    }
+
     }
 }

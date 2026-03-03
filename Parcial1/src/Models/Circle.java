@@ -8,8 +8,8 @@ public class Circle extends GeometricObject{
     }
 
     public Circle(double radius, String color, boolean filled){
-        this.radius = radius;
         super(color, filled);
+        this.radius = radius;
     }
 
     public double getRadius() {

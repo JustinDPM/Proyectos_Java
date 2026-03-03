@@ -8,9 +8,9 @@ public class Rectangle extends GeometricObject{
     }
 
     public Rectangle(double width, double height, String color, boolean filled) {
+        super(color, filled);
         this.width = width;
         this.height = height;
-        super(color, filled);
     }
 
     public double getHeight() {
